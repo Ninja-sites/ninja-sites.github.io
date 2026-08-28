@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>السودا · لؤلؤة ريف طرطوس</title>
+<meta name="description" content="السودا — بلدةٌ على بعد 15 كيلومتراً من طرطوس، تطلّ على البحر والجبل معاً، وتشتهر بأزقّتها البازلتية السوداء وسوقها القديم وكنيستها العريقة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c1812;
+  --basalt:#2c2621;
+  --cream:#f6efe2;
+  --paper:#fffdf7;
+  --olive:#5a6b3b;
+  --olive-dark:#43512c;
+  --terra:#a03d2b;
+  --gold:#d8b06a;
+  --line:rgba(28,24,18,.12);
+  --serif:"El Messiri",sans-serif;
+  --sans:"Almarai",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1000px;margin:0 auto;padding:0 clamp(18px,5vw,36px)}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(28,24,18,.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#f4ecd9}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.25rem}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:20px;list-style:none;font-size:.9rem;font-weight:500}
+.nav-links a{text-decoration:none;opacity:.85;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold)}
+@media(max-width:720px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-1}
+.hero-bg video,.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,12,10,.85),rgba(14,12,10,.28))}
+.hero-content{padding:0 clamp(20px,6vw,48px) clamp(40px,8vh,80px);width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:#e7cf9f;font-size:.85rem;font-weight:700;letter-spacing:1px;margin-bottom:14px}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--gold)}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(3rem,13vw,6.5rem);line-height:1.05;color:#fff;margin-bottom:10px}
+.hero h1 small{display:block;font-size:.3em;font-family:var(--sans);font-weight:500;color:#e7cf9f;letter-spacing:5px}
+.hero p.lede{max-width:560px;color:#f0e8d8;font-size:clamp(1rem,2.2vw,1.18rem);font-weight:300;margin:14px 0 28px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:999px;font-family:var(--sans);font-weight:700;font-size:.95rem;text-decoration:none;transition:transform .18s,box-shadow .18s}
+.btn-solid{background:var(--gold);color:#241a0c}
+.btn-solid:hover{transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(216,176,106,.8)}
+.btn-ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+
+/* SECTIONS */
+.section{padding:clamp(56px,9vw,96px) 0}
+.kicker{color:var(--terra);font-weight:800;font-size:.84rem;letter-spacing:2px;margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.kicker::after{content:"";flex:0 0 42px;height:2px;background:var(--terra)}
+h2.sec{font-family:var(--serif);font-weight:700;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.3;margin-bottom:16px}
+.sec-lede{font-size:1.08rem;color:#544b3f;max-width:660px;font-weight:300;margin-bottom:clamp(28px,5vw,44px)}
+
+/* ABOUT + FACTS */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(26px,5vw,54px);align-items:center}
+.about-grid p{color:#3f382e}
+.about-grid img{border-radius:18px;box-shadow:0 20px 50px -22px rgba(28,24,18,.5)}
+@media(max-width:720px){.about-grid{grid-template-columns:1fr}}
+.facts{background:var(--basalt);color:#efe6d5;border-radius:18px;margin-top:clamp(34px,6vw,56px);padding:clamp(24px,5vw,40px)}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.fact b{display:block;font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);color:var(--gold);line-height:1}
+.fact span{font-size:.86rem;color:#cfc4ae;display:block;margin-top:6px}
+@media(max-width:640px){.facts-grid{grid-template-columns:1fr 1fr;gap:20px}}
+
+/* CARDS (visit / do / stay) */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 30px -22px rgba(28,24,18,.4)}
+.card img{width:100%;height:170px;object-fit:cover}
+.card .body{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.card .ci{font-size:1.6rem;margin-bottom:6px}
+.card h3{font-family:var(--serif);font-size:1.3rem;margin-bottom:6px}
+.card .ct{color:var(--terra);font-size:.8rem;font-weight:700;margin-bottom:8px}
+.card p{color:#3f382e;font-size:.93rem;flex:1}
+.card .card-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--terra);font-weight:700;font-size:.86rem;text-decoration:none}
+.card .card-link:hover{text-decoration:underline}
+
+/* STONE BAND */
+.band{position:relative;min-height:60vh;display:flex;align-items:center;color:#fff;isolation:isolate}
+.band-img{position:absolute;inset:0;z-index:-1}
+.band-img img{width:100%;height:100%;object-fit:cover}
+.band-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(14,12,10,.82),rgba(14,12,10,.45))}
+.band-box{max-width:540px;background:rgba(20,17,14,.72);backdrop-filter:blur(4px);padding:clamp(26px,4vw,40px);border-radius:16px;border:1px solid rgba(216,176,106,.25)}
+.band-box .kicker{color:var(--gold)}
+.band-box .kicker::after{background:var(--gold)}
+.band-box h3{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:14px;line-height:1.3}
+.band-box p{color:#efe8da;font-weight:300}
+.quote{border-right:3px solid var(--gold);padding-right:16px;margin:18px 0;font-family:var(--serif);font-size:1.15rem;color:#f3ecd9}
+@media(max-width:720px){.band-img::after{background:linear-gradient(to top,rgba(14,12,10,.85),rgba(14,12,10,.5))}}
+
+/* GEO / MAP */
+.geo{background:var(--paper);border-radius:18px;padding:clamp(24px,5vw,40px)}
+.map-frame{border-radius:14px;overflow:hidden;min-height:300px;box-shadow:0 16px 40px -24px rgba(28,24,18,.5)}
+.map-frame iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.geo-list{margin-top:22px;display:grid;gap:12px}
+.geo-item{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#fbf7ee}
+.geo-item .gi{font-size:1.2rem;margin-top:2px}
+.geo-item b{display:block;font-size:.98rem}
+.geo-item span{color:#544b3f;font-size:.9rem;font-weight:300}
+.geo-item a{color:var(--terra);font-weight:700;font-size:.88rem;text-decoration:none}
+.geo-item a:hover{text-decoration:underline}
+
+/* GALLERY */
+.gallery-grid{columns:3;column-gap:16px}
+.g-item{break-inside:avoid;margin-bottom:16px;position:relative;border-radius:12px;overflow:hidden}
+.g-item img{width:100%;transition:transform .5s ease}
+.g-item:hover img{transform:scale(1.05)}
+.g-item figcaption{position:absolute;inset:auto 0 0 0;padding:22px 12px 10px;color:#fff;font-size:.84rem;background:linear-gradient(to top,rgba(14,12,10,.8),transparent)}
+@media(max-width:860px){.gallery-grid{columns:2}}
+@media(max-width:520px){.gallery-grid{columns:1}}
+.g-item{cursor:zoom-in}
+.lightbox{position:fixed;inset:0;background:rgba(10,9,8,.94);z-index:200;display:none;align-items:center;justify-content:center;flex-direction:column;padding:40px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:78vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lightbox .cap{color:#e7cf9f;margin-top:16px;font-size:.95rem;text-align:center;max-width:700px}
+.lightbox .close{position:absolute;top:24px;left:30px;font-size:2.4rem;color:#fff;cursor:pointer;line-height:1;background:none;border:none}
+.lightbox .nav{position:absolute;top:50%;transform:translateY(-50%);font-size:2.6rem;color:#fff;cursor:pointer;background:none;border:none;padding:10px}
+.lightbox .prev{right:26px}.lightbox .next{left:26px}
+
+/* CTA / FOOTER */
+.cta{text-align:center;padding:clamp(60px,10vw,100px) 0;background:var(--olive-dark);color:#f1ecdd}
+.cta h2{font-family:var(--serif);font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:14px;color:#fff}
+.cta p{color:#e8e2cf;max-width:520px;margin:0 auto 26px;font-weight:300}
+.cta .btn{margin:0 auto}
+footer{background:#15120d;color:#bdb29e;padding:clamp(40px,6vw,60px) 0 32px;text-align:center}
+footer p{font-size:.9rem;font-weight:300;max-width:640px;margin:0 auto}
+footer .src{margin-top:8px;color:#a3947a;font-size:.84rem}
+footer .cr{border-top:1px solid rgba(255,255,255,.1);margin-top:28px;padding-top:20px;font-size:.8rem;color:#8f8571}
+footer .cr b{color:#d8b06a;font-weight:700}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">السودا<span> ·</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">البلدة</a></li>
+      <li><a href="#visit">ماذا أزور؟</a></li>
+      <li><a href="#geo">الموقع والإقامة</a></li>
+      <li><a href="#gallery">الصور</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 1. HERO -->
+<header class="hero">
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline preload="metadata" poster="images/hero.jpg" aria-label="لقطات جوية لبلدة السودا">
+      <source src="videos/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow" data-e="hero.eyebrow">ريف طرطوس · الساحل السوري</div>
+    <h1>السودا<small data-e="hero.title_small">لؤلؤة ريف طرطوس</small></h1>
+    <p class="lede" data-e="hero.lede">بلدةٌ تطلّ على البحر من الغرب والجبال من الشرق، تتربّع فوق فوهةِ بركانٍ خامد، وتزيّن أزقّتها أحجارٌ بازلتيةٌ سوداء.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#about" data-e="hero.cta1">اكتشف البلدة</a>
+      <a class="btn btn-ghost" href="#gallery" data-e="hero.cta2">شاهد الصور</a>
+    </div>
+  </div>
+</header>
+
+<!-- 2. ABOUT + FACTS -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="kicker" data-e="about.kicker">نبذة</div>
+        <h2 class="sec" data-e="about.heading">بلدةٌ تعانق البحرَ والجبلَ معاً</h2>
+        <p data-e="about.p1">السودا بلدةٌ ومركزُ ناحيةٍ على بُعد 15 كيلومتراً شمال شرق طرطوس. تقع على سفحِ جبلٍ يطلّ على الجهات الأربع، فتُطلّ على البحرِ المتوسط من الغرب والجبالِ من الشرق، وتشكّل البوابةَ الطبيعيةَ نحو الداخلِ السوري عبر طريقِ طرطوس–وادي العيون–مصياف.</p>
+        <p style="margin-top:14px;color:#544b3f" data-e="about.p2">تعود نشأةُ البلدةِ إلى نحو ثلاثةِ قرونٍ ونصف، وتتوسّط فوهةَ بركانٍ خامد، منحها تربةً خصبةً وطبيعةً متميّزةً عن القرى المحيطة.</p>
+      </div>
+      <img src="images/town_aerial_hills.jpg" alt="البلدة من الجو بين التلال والجبال المحيطة" data-e="about.img">
+    </div>
+
+    <div class="facts">
+      <div class="facts-grid">
+        <div class="fact"><b>15</b><span>كم شمال شرق طرطوس</span></div>
+        <div class="fact"><b>+300</b><span>متر فوق سطح البحر</span></div>
+        <div class="fact"><b>~350</b><span>عاماً من العمر</span></div>
+        <div class="fact"><b>بركان</b><span>خامدٌ تحتضنُه التلال</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. WHAT TO VISIT -->
+<section class="section" id="visit">
+  <div class="wrap">
+    <div class="kicker" data-e="visit.kicker">ماذا أزور؟</div>
+    <h2 class="sec" data-e="visit.heading">أبرز معالم السودا</h2>
+    <p class="sec-lede" data-e="visit.lede">سوقٌ قديمٌ مرصوفٌ بالحجارة السوداء، وكنيسةٌ من أقدم كنائس سوريا، وأزقّةٌ حافظت على طابعها التراثي حيّاً حتى اليوم.</p>
+
+    <div class="card-grid">
+      <article class="card">
+        <img src="images/shops_street.jpg" alt="سوق السودا القديم" data-e="visit.c1.img">
+        <div class="body">
+          <div class="ci">🏪</div>
+          <h3 data-e="visit.c1.title">سوق السودا القديم</h3>
+          <div class="ct" data-e="visit.c1.tag">المعلم الأول</div>
+          <p data-e="visit.c1.text">سوقٌ مرصوفٌ بالحجارةِ السوداء يحافظ على طابعه التراثي بواجهاتِه الخشبية، وما زال نابضاً بالحياة يؤمّن حاجيّات الأهالي.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/church.jpg" alt="كنيسة رقاد السيدة العذراء" data-e="visit.c2.img">
+        <div class="body">
+          <div class="ci">⛪</div>
+          <h3 data-e="visit.c2.title">كنيسة رقاد السيدة</h3>
+          <div class="ct" data-e="visit.c2.tag">من أقدم كنائس سوريا</div>
+          <p data-e="visit.c2.text">أصلُها يعود إلى القرن الثالث الميلادي، بمعمارٍ يجمع أنماطاً متعدّدة، ويُحتفل بعيدها في 15 آب من كل عام.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/alley_red.jpg" alt="أزقة السودا الحجرية" data-e="visit.c3.img">
+        <div class="body">
+          <div class="ci">🏘️</div>
+          <h3 data-e="visit.c3.title">النسيج العمراني التراثي</h3>
+          <div class="ct" data-e="visit.c3.tag">الحجر البازلتي الأسود</div>
+          <p data-e="visit.c3.text">أبوابٌ خشبيةٌ حمراء وأزقّةٌ متشابكةٌ وبيوتٌ من الحجرِ الأسود — أرشيفٌ حيّ لذاكرةِ المجتمع.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STONE BAND -->
+<section class="band">
+  <div class="band-img"><img src="images/shops_street.jpg" alt="السوق القديم في السودا" data-e="stone.bg"></div>
+  <div class="wrap">
+    <div class="band-box">
+      <div class="kicker" data-e="stone.kicker">الحجر الأسود</div>
+      <h3 data-e="stone.heading">من هذا الحجرِ خُطّ اسمُها… ومنه بُني شارعُ الشانزليزيه</h3>
+      <p data-e="stone.text">سميتِ البلدةُ نسبةً إلى الأحجارِ البازلتيةِ السوداء التي بُنيَت منها أغلبُ مبانيها، والتي اشتهرت بها منذ قرون.</p>
+      <div class="quote" data-e="stone.quote">«وكانت تُنقلُ هذه الحجارةُ إبّان الاستعمارِ الفرنسي عبر البحرِ إلى بيروتَ ثم إلى فرنسا، فبُنيَ بها شارعُ الشانزليزيه في باريس.»</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 5. LOCATION + STAY -->
+<section class="section" id="geo">
+  <div class="wrap">
+    <div class="kicker" data-e="geo.kicker">أين تقيم؟ وكيف أصل؟</div>
+    <h2 class="sec" data-e="geo.heading">الموقع والإقامة والطعام</h2>
+    <p class="sec-lede" data-e="geo.lede">على بعد ربع ساعةٍ من طرطوس، تنتظرك استراحاتٌ ومقاهٍ ومطاعمُ في قلبِ البلدة.</p>
+
+    <div class="geo">
+      <div class="map-frame">
+        <iframe title="خريطة بلدة السودا" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=34.9822,35.9436&z=13&output=embed"></iframe>
+      </div>
+      <div class="geo-list">
+        <div class="geo-item"><span class="gi">📍</span><div><b>الموقع</b><span>شمال شرق مدينة طرطوس، على بُعد 15 كيلومتراً</span></div></div>
+        <div class="geo-item"><span class="gi">🛣️</span><div><b>الطريق</b><span>طرطوس – وادي العيون – مصياف – حماة</span></div></div>
+        <div class="geo-item"><span class="gi">🧭</span><div><b>الاتجاهات</b><span><a href="https://www.google.com/maps/dir/?api=1&destination=34.9822,35.9436" target="_blank" rel="noopener">افتح في خرائط جوجل</a></span></div></div>
+      </div>
+
+      <div class="card-grid" style="margin-top:24px">
+        <article class="card">
+          <img src="images/cantia.jpg" alt="منتجع كانتيا السياحي" data-e="geo.c1.img">
+          <div class="body">
+            <div class="ci">🏨</div>
+            <h3 data-e="geo.c1.title">منتجع كانتيا السياحي</h3>
+            <div class="ct" data-e="geo.c1.tag">إقامة واستراحة · منذ 2004</div>
+            <p data-e="geo.c1.text">منتجعٌ يستقبل الحجوزات للمناسبات والحفلات، وجهةٌ مريحة للإقامة قرب الطبيعة.</p>
+            <a class="card-link" href="tel:+963****6032" data-e="geo.c1.phone">📞 0932 646 032</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/tarbush.jpg" alt="مطعم الطربوش" data-e="geo.c2.img">
+          <div class="body">
+            <div class="ci">🥘</div>
+            <h3 data-e="geo.c2.title">مطعم الطربوش</h3>
+            <div class="ct" data-e="geo.c2.tag">مطعم شرقي</div>
+            <p data-e="geo.c2.text">يشتهر بأطباقِ الفخارِ واللحومِ بنكهةٍ أصيلةٍ، من أبرز وجهاتِ الأكل في البلدة.</p>
+            <a class="card-link" href="tel:+963****5080" data-e="geo.c2.phone">📞 0944 525 080 · 043 410 4651</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="body">
+            <div class="ci">☕</div>
+            <h3 data-e="geo.c3.title">مقاهي البلدة</h3>
+            <div class="ct" data-e="geo.c3.tag">شامو كافيه · Groupe Café</div>
+            <p data-e="geo.c3.text">مقاهٍ في قلبِ البلدة، مكانٌ مثاليٌّ للاسترخاءِ وسطَ أجواءِ القريةِ الهادئة.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. GALLERY -->
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="kicker" data-e="gallery.kicker">الصور</div>
+    <h2 class="sec" data-e="gallery.heading">لقطاتٌ من جمال السودا</h2>
+    <p class="sec-lede" data-e="gallery.lede">أزقّةٌ بازلتيةٌ، سوقٌ عريق، كنيسةٌ أثرية، وطبيعةٌ تتدرّج بين البحرِ والجبل.</p>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="section" id="video" style="padding-top:0">
+  <div class="wrap" style="text-align:center">
+    <div class="kicker" style="justify-content:center" data-e="video.kicker">فيديو</div>
+    <h2 class="sec" data-e="video.heading">شاهد السودا بنفسك</h2>
+    <p class="sec-lede" style="margin:0 auto clamp(24px,4vw,34px)" data-e="video.lede">جولةٌ حقيقيةٌ في أزقّة البلدة — الحجر الأسود، زهور الجهنمية، والكنيسة العريقة.</p>
+    <div style="display:flex;gap:18px;flex-wrap:wrap;justify-content:center;max-width:900px;margin:0 auto">
+      <a class="vcard" href="videos/town_walk.mp4" target="_blank" rel="noopener"
+        style="position:relative;display:block;width:min(100%,300px);border-radius:18px;overflow:hidden;box-shadow:0 20px 50px -22px rgba(28,24,18,.55);background:#000;text-decoration:none">
+        <img src="videos/town_walk_poster.jpg" alt="جولة في أزقّة السودا" style="width:100%;aspect-ratio:9/16;object-fit:cover;display:block">
+        <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(14,12,10,.25)">
+          <span style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:24px;color:#241a0c">▶</span>
+        </span>
+        <span style="position:absolute;right:0;bottom:0;left:0;padding:26px 14px 12px;color:#fff;font-size:.9rem;background:linear-gradient(to top,rgba(14,12,10,.85),transparent);text-align:right">جولة في أزقّة البلدة</span>
+      </a>
+      <a class="vcard" href="videos/aerial_town.mp4" target="_blank" rel="noopener"
+        style="position:relative;display:block;width:min(100%,560px);border-radius:18px;overflow:hidden;box-shadow:0 20px 50px -22px rgba(28,24,18,.55);background:#000;text-decoration:none">
+        <img src="videos/aerial_town_poster.jpg" alt="منظر جوي لبلدة السودا" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+        <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(14,12,10,.25)">
+          <span style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:24px;color:#241a0c">▶</span>
+        </span>
+        <span style="position:absolute;right:0;bottom:0;left:0;padding:26px 14px 12px;color:#fff;font-size:.9rem;background:linear-gradient(to top,rgba(14,12,10,.85),transparent);text-align:right">منظر جوي للبلدة</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<footer>
+  <div class="wrap">
+    <p data-e="footer.l1">موقعٌ تعريفيٌّ سياحيٌّ غير رسميٍّ يُبرزُ جمالَ بلدةِ السودا وتراثَها في ريفِ محافظةِ طرطوس، سوريا.</p>
+    <p class="src" data-e="footer.l2">📷 الصور: من أهالي بلدة السودا — صورٌ حقيقيةٌ للبلدة وأزقّتها ومعالمها.</p>
+    <p class="src" data-e="footer.l3">📚 المعلومات التاريخية: من مصادر عامة وتقارير عن البلدة (عنب بلدي، eSyria، تلفزيون سوريا، قناة اليوم).</p>
+    <p class="src" data-e="footer.l4">🎬 الفيديو: جولةٌ مصوّرةٌ في أزقّة البلدة.</p>
+    <p class="cr" data-e="footer.l5">صُمّم بحبٍّ لعشّاق السودا · 2026</p>
+    <p class="cr" style="border-top:0;margin-top:6px;padding-top:0">بُني هذا الموقع بمساعدة مساعد الذكاء الاصطناعي «<b>Ninja</b>» · أُنجزت هذه النسخة في أقلّ من ساعةٍ من العمل.</p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lb">
+  <button class="close" id="lbClose" aria-label="إغلاق">✕</button>
+  <button class="nav prev" id="lbPrev" aria-label="السابق">‹</button>
+  <img id="lbImg" src="" alt="">
+  <div class="cap" id="lbCap"></div>
+  <button class="nav next" id="lbNext" aria-label="التالي">›</button>
+</div>
+
+<script>
+/* ===== تحميل المحتوى من content.json وتطبيقه ===== */
+function applyContent(c){
+  document.querySelectorAll('[data-e]').forEach(function(el){
+    var v=c; el.getAttribute('data-e').split('.').forEach(function(k){ v=v&&v[k]; });
+    if(v==null || v==='') return;
+    if(el.tagName==='IMG'){ el.setAttribute('src', v); }
+    else if(el.tagName==='SMALL'){ el.textContent=v; }
+    else{ el.innerHTML=v; }
+  });
+  var grid=document.getElementById('galleryGrid');
+  if(grid && c.gallery && c.gallery.images){
+    grid.innerHTML=c.gallery.images.map(function(src){
+      return '<figure class="g-item"><img src="'+src+'" alt=""></figure>';
+    }).join('');
+  }
+}
+/* Lightbox — تكبير الصور */
+function initLightbox(){
+  var items = Array.prototype.slice.call(document.querySelectorAll('.g-item'));
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'),
+      lbCap = document.getElementById('lbCap'), idx = 0;
+  function openLB(i){
+    idx = (i + items.length) % items.length;
+    var el = items[idx], im = el.querySelector('img');
+    lbImg.src = im.src; lbImg.alt = im.alt;
+    lbCap.textContent = ((el.getAttribute('data-cap') || (el.querySelector('figcaption')||{}).textContent) || '').trim();
+    lb.classList.add('open'); document.body.style.overflow = 'hidden';
+  }
+  function closeLB(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+  items.forEach(function(el, i){ el.addEventListener('click', function(){ openLB(i); }); });
+  document.getElementById('lbClose').addEventListener('click', closeLB);
+  document.getElementById('lbPrev').addEventListener('click', function(e){ e.stopPropagation(); openLB(idx-1); });
+  document.getElementById('lbNext').addEventListener('click', function(e){ e.stopPropagation(); openLB(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLB(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLB();
+    if(e.key === 'ArrowLeft') openLB(idx+1);
+    if(e.key === 'ArrowRight') openLB(idx-1);
+  });
+}
+fetch('content.json').then(function(r){return r.json()}).then(applyContent).catch(function(){}).then(initLightbox);
+</script>
+</body>
+</html>
